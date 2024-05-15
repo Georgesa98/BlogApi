@@ -1,0 +1,50 @@
+[
+    {
+        "model":"Tag.Tag",
+        "pk": 1,
+        "fields": {
+            "name": "Tech",
+            "is_verified": true
+        }
+    },
+    {
+        "model":"Tag.Tag",
+        "pk": 2,
+        "fields": {
+            "name": "Music",
+            "is_verified": true
+        }
+    },
+    {
+        "model":"Tag.Tag",
+        "pk": 3,
+        "fields": {
+            "name": "LifeStyle",
+            "is_verified": true
+        }
+    },
+    {
+        "model":"Tag.Tag",
+        "pk": 4,
+        "fields": {
+            "name": "Gaming",
+            "is_verified": true
+        }
+    },
+    {
+        "model":"Like.LikeType",
+        "pk": 1,
+        "fields": {
+            "type": "Like"
+        }
+    },
+    {
+        "model":"Like.LikeType",
+        "pk": 2,
+        "fields": {
+            "type": "DisLike"
+        }
+    }
+    
+    
+]
