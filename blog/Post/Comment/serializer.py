@@ -1,6 +1,8 @@
 from rest_framework import serializers
 
 from Users.serializers import GetUserSer
+from Users.models import Users
+from Post.models import Post
 from .models import Comment
 
 
@@ -11,6 +13,11 @@ class CreateCommentSer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         comment = Comment.objects.create(**validated_data)
+        user = Users.objects.get(pk=validated_data["fk_user"].id)
+        post = Post.objects.get(pk=validated_data["fk_post"].id)
+        tags = post.tags.all()
+        for tag in tags:
+            user.recommendation.add(tag.id)
         comment.save()
         return comment
 

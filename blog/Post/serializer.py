@@ -16,6 +16,7 @@ class CreatePostSer(serializers.ModelSerializer):
         model = Post
         fields = [
             "fk_author_id",
+            "created_at",
             "title",
             "image",
             "content",
@@ -87,6 +88,7 @@ class GetPostSer(serializers.ModelSerializer):
         fields = [
             "id",
             "fk_author_id",
+            "created_at",
             "title",
             "image",
             "content",
